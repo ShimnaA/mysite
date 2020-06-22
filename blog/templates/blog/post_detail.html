@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Post</title>
+</head>
+<body>
+{% if post.published_date %}
+    <div>
+        {{ post.published_date }}
+    </div>
+     <h2><a href="">{{ post.title }}</a> </h2>
+     <p> {{ post.text|linebreaksbr }}</p>
+{% endif %}
+</body>
+</html>
