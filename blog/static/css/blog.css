@@ -1,0 +1,26 @@
+.page-header {
+    background-color: chocolate;
+    padding: 20px 20px 20px 40px;
+    margin-top: 0;
+}
+.page-header h1, .page-header h1 a {
+    color: white;
+    font-size: 36pt;
+    text-decoration: none;
+}
+.content{
+    margin: 40px;
+}
+h1, h2, h3, h4 {
+    font-family: 'Droid Sans', serif;
+    font-size: 48px;
+}
+.date {
+    color: #828282;
+}
+.post {
+    margin-bottom: 70px;
+}
+.post h2 a {
+    color: #000000;
+}
