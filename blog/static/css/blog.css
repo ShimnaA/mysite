@@ -30,4 +30,11 @@ h1, h2, h3, h4 {
 .post-form-blog textarea {
     width:100%;
 }
+.top-menu {
+    color: white;
+    float: right;
+    font-size: 48px;
+    margin-right: 20px;
+}
+
 
