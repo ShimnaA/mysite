@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     # 127.0.0.1/8000/  (local)
@@ -20,7 +20,6 @@ urlpatterns = [
     path('drafts/', views.post_draft_list, name='post_draft_list'),
     # 127.0.0.1/8000/post/4/publish/
     path('post/<int:pk>/publish/', views.post_publish, name='post_publish'),
-    # 127.0.0.1/8000/accounts/login/ (local)
-    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
+
 
 ]
