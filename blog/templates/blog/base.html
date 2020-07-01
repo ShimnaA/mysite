@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Post</title>
+    <title>{% block title %} {% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -14,9 +14,11 @@
 <body>
 <div class="page-header">
     {% if user.is_authenticated %}
-         <a href="{% url "post_draft_list" %}" class="top-menu" style="float: right"> <i class="fab fa-firstdraft fa-2x"></i> </i></a>
-        <a href="{% url "post_new" %}" class="top-menu" style="float: right"> <i class="fas fa-plus fa-2x"
+         <a href="{% url "post_draft_list" %}" class="top-menu" style="float: right"> <i class="fab fa-firstdraft"></i> </i></a>
+        <a href="{% url "post_new" %}" class="top-menu" style="float: right"> <i class="fas fa-plus"
          style="color: white"></i></a>
+    {% else %}
+        <a href="{% url "login" %}" class="top-menu" style="float: right"> <i class="fas fa-sign-in-alt"></i> </i></a>
     {% endif %}
    <h1><a href="{% url "post_list" %}">Clever Programmer Blog </a></h1>
 
